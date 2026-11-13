@@ -9,14 +9,14 @@ country: "de"      # lowercase two-letter ISO country code such as "fr" (see htt
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "0"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "0"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "25 - 26 Feb 2026"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "9:00 am - 1:00 pm CET"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: 25th Feb 2026      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 26th Feb 2026        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Johannes Wasmer", "Dirk Baker"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Dirk Baker", "Johannes Wasmer"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["hida-courses@helmholtz.de", "j.wasmer@fz-juelich.de", "dirk.baker@ufz.de"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes: https://pad.carpentries.org/2026-02-25-hida-kickstart-python-online # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+humandate: "Nov 19-20, 2026"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00 am - 1:00 pm CET (8:00 am - 12:00 pm UTC)"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+startdate: 2026-11-19      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2026-11-20        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Athar Khodabakhsh", "Santiago Casas"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Athar Khodabakhsh", "Santiago Casas"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["hida-courses@helmholtz.de", "atharkh@gmail.com", "casas@physik.rwth-aachen.de"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions
+collaborative_notes: https://pad.carpentries.org/2026-11-19_HIDA-kickstart-python-online # optional: URL for the workshop collaborative notes
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 what3words:           # optional: what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
 ---
@@ -104,6 +104,19 @@ displayed if the 'eventbrite' field in the header is not set.
 </script>
 {% endif %}
 
+
+<div class="panel panel-info">
+  <div class="panel-heading"><strong>HIDA Kickstart Python — course links</strong></div>
+  <div class="panel-body">
+    <ul>
+      <li><strong>Sign-up &amp; survey:</strong> <a href="https://events.hifis.net/event/3344/">events.hifis.net/event/3344</a></li>
+      <li><strong>Collaborative notepad:</strong> <a href="{{ page.collaborative_notes }}">{{ page.collaborative_notes }}</a></li>
+      <li><strong>Schedule:</strong> see <a href="#schedule">below</a>. Please complete the <a href="#setup">setup</a> before Day 1.</li>
+      <li><strong>Course materials:</strong> all exercises and solutions will be published on this page at the end of the course.</li>
+      <li><strong>HIDA course catalogue:</strong> <a href="https://www.helmholtz-hida.de/course-catalog/en/">helmholtz-hida.de/course-catalog</a></li>
+    </ul>
+  </div>
+</div>
 
 <h2 id="general">General Information</h2>
 
@@ -421,6 +434,17 @@ Edit/replace the text above if you want to include a schedule table.
 See the contents of the _includes/custom-schedule.html file for an example of
 how one of these schedule tables is constructed.
 {% endcomment %}
+
+<h3 id="outlook">Outlook: recommended follow-up HIDA courses</h3>
+<p>
+  To continue, we recommend these follow-up courses from the
+  <a href="https://www.helmholtz-hida.de/course-catalog/en/">HIDA course catalogue</a>:
+</p>
+<ul>
+  <li><strong>Command line and version control</strong>, e.g. "Kickstart Shell &amp; Git" or "Introduction to Git and GitLab".</li>
+  <li><strong>Data science</strong>, e.g. "Data Processing with Pandas and Visualization in Matplotlib".</li>
+  <li><strong>Machine learning</strong>, e.g. "Basic Methods in Machine Learning" or "Introduction to Machine Learning".</li>
+</ul>
 
 {% if site.pilot %}
 The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please <a href="mailto:{{page.email}}">contact the workshop organisers</a> if you would like more information about the planned schedule.
